@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+
+<head> 
+<meta name="description" content="My name is Drew Russo, and this is my contact page. You will find my contact information, resume, and other fun facts about me.">
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"  /> 
+
+<link rel="stylesheet" type="text/css" href="styles-contact.css"> 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+ 
+<meta charset=”UTF-8”>
+
+<!-- THE TITLE WILL APPEAR IN THE BROWSER WINDOW OR TAB -->
+<title> Drew Russo | Contact Page </title>
+
+</head>
+
+<body>
+    <header class="main-header">
+<img src="images/drlogo.png" width="250px">
+<ul class="main-nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Me</a></li>
+<li><a href="contact.html">Contact Information</a></li>
+<li><a href="resume.html">Resume</a></li>
+</ul>
+</header>
+
+<!-- Start of center div -->
+<div class="center">
+    <img id="logo" src="images/drlogo.png" alt="Drew Russo Contact Page" width="600"> 
+    <h1> Hello! Welcome to my contact page :) <br> <br> <br>  Anything you need can be found in the navigation bar. <br> <br> <br> <br> <br> <h2> Here are some pictures of me to get to know me better. </h2>
+    
+
+ <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 9</div>
+    <img src="images/Slides/christmas.jpeg" alt= "Me standing next to a Christmas tree" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 9</div>
+    <img src="images/Slides/bella.jpeg" alt="Me playing with his puppy Bella" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 9</div>
+    <img src="images/Slides/group.jpeg" alt="Me and my friends taking a silly picture" style="width:100%">
+  </div>
+   
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 9</div>
+    <img src="images/Slides/shrug.jpeg" alt="Me shrugging while playing DND" style="width:100%">
+  </div>
+
+   <div class="mySlides fade">
+    <div class="numbertext">5 / 9</div>
+    <img src="images/Slides/truck.jpeg" alt="Me holding a food truck my group made in Spanish class" style="width:100%">
+  </div>
+
+   <div class="mySlides fade">
+    <div class="numbertext">6 / 9</div>
+    <img src="images/Slides/meandbenson.jpeg" alt="Me taking a selfie with Benson in a Batman mask and a wig" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">7 / 9</div>
+    <img src="images/Slides/scary.png" alt="Me in English class with a terrible haircut" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">8 / 9</div>
+    <img src="images/Slides/meandjacob.jpeg" alt="Me and Jacob at a football game" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">9 / 9</div>
+    <img src="images/Slides/goldenwarrior.png" alt="Me filming a scene in our Spanish final video" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+   <span class="dot" onclick="currentSlide(7)"></span>
+   <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+
+</div>   
+     
+</div> 
+<!-- End of center div -->
+   
+</div>
+</body>
+
+</html>
